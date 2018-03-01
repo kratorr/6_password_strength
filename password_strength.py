@@ -36,12 +36,9 @@ def check_password_in_black_list(password, blacklist, score=2):
 if __name__ == "__main__":
     try:
         blacklist = get_blacklist(sys.argv[1])
-    except:
-        FileNotFoundError
+    except FileNotFoundError:
         exit("File not found")
     password = input("Input password: ")
-    if len(password) == 0:
-        exit("Empty password")
     check_list = [
         check_upper_lower_case(password),
         check_numerical_digits(password),
