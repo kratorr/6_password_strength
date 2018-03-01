@@ -5,16 +5,17 @@ This program prints to the console password strength after input
 # How to Install
 
 Python 3 should be already installed.
+You can also download blacklist of passwords [Blacklist](http://dazzlepod.com/site_media/txt/passwords.txt)
 
 # Quickstart
 
-The program must be run using the console, the required argument is the file with blacklist passwords.
+The program must be run using the console, the required argument is the file with blacklist of passwords.
 
 How to run:
 ```bash
 $ python3 password_strength.py <file_path>
 ```
-Example of blacklist passwords:
+Example of blacklist of passwords:
 ```bash
 $ cat passwords.txt
 1234567
