@@ -1,9 +1,10 @@
 import sys
+import getpass
 
 
-def get_blacklist(filepath):
+def load_blacklist(filepath):
     with open(filepath, "r") as file:
-        blacklist = file.read().strip()
+        blacklist = file.read().splitlines()
     return blacklist
 
 
@@ -23,8 +24,8 @@ def check_special_characters(password, score=2):
         return score
 
 
-def check_password_lenght(password, score=2):
-    if len(password) > 8:
+def check_password_lenght(password, score=2, min_password_lenght = 8):
+    if len(password) > min_password_lenght:
         return score
 
 
@@ -35,10 +36,10 @@ def check_password_in_black_list(password, blacklist, score=2):
 
 if __name__ == "__main__":
     try:
-        blacklist = get_blacklist(sys.argv[1])
+        blacklist = load_blacklist(sys.argv[1])
     except FileNotFoundError:
         exit("File not found")
-    password = input("Input password: ")
+    password = getpass.getpass("Enter your password: ")
     check_list = [
         check_upper_lower_case(password),
         check_numerical_digits(password),
