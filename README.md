@@ -5,7 +5,7 @@ This program prints to the console password strength after input
 # How to Install
 
 Python 3 should be already installed.
-You can also download blacklist of passwords [Blacklist](http://dazzlepod.com/site_media/txt/passwords.txt)
+You can also download blacklist of passwords [Blacklist 19mb](http://dazzlepod.com/site_media/txt/passwords.txt) or use passwords from [Here](https://github.com/danielmiessler/SecLists)
 
 # Quickstart
 
